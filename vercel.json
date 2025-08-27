@@ -11,6 +11,18 @@
   ],
   "routes": [
     {
+      "src": "/bundle.js",
+      "dest": "/bundle.js"
+    },
+    {
+      "src": "/styles.css",
+      "dest": "/styles.css"
+    },
+    {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/index.html"
     }

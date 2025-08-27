@@ -12,7 +12,18 @@ const VSLanding = () => {
   });
 
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    // Inicializar AOS após o componente estar montado
+    setTimeout(() => {
+      try {
+        AOS.init({ 
+          duration: 1000,
+          once: true,
+          offset: 100
+        });
+      } catch (error) {
+        console.log('AOS initialization error:', error);
+      }
+    }, 100);
   }, []);
 
   // Contador funcional
