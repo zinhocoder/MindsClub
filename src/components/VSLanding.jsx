@@ -71,11 +71,18 @@ const VSLanding = () => {
       image: "juliana-assis.jpg"
     },
     {
-      name: "Taynara Lys dos Santos Couto",
+      name: "Taynara Lys",
       crp: "04/68936",
-      content: "Na Mind's Club me senti reconhecida como profissional e encontrei um espaço para crescer com ética, visibilidade e apoio.",
+      content: "Fiquei muito feliz em poder atender oficialmente pela Mind's Club. A experiência foi muito significativa porque senti na prática o propósito do projeto: levar apoio emocional além das fronteiras geográficas. Estar no interior de Minas e poder me conectar com alguém do Sul do país mostra a força dessa rede e como a distância não é um obstáculo quando existe empatia e escuta verdadeira. Foi gratificante perceber que mesmo separados fisicamente é possível criar um espaço acolhedor e humano.",
       rating: 5,
       image: "taynara-lys.jpg"
+    },
+    {
+      name: "Kênia Carvalho Mendes",
+      crp: "22888/04",
+      content: "Meu nome é Kênia, e quarta fiz meu primeiro atendimento pela Mind's Club. Sou formada há 21 anos e com pouca familiaridade com internet. Entrei neste grupo, p auxiliar na construção do projeto e tentar entender como é feito captação de clientes online. Na vdd nem pensei q teria algum retorno real.",
+      rating: 5,
+      image: "kenia.jpg"
     },
     {
       name: "Maira das graças Pereira Esteves",
@@ -112,15 +119,15 @@ const VSLanding = () => {
     { 
       icon: <FaGlobe />, 
       title: "Visibilidade Nacional", 
-      desc: "Atenda pacientes de todo o Brasil através da plataforma" 
+      desc: "Atenda pacientes de todo Brasil , conectados pela Mind’s Club" 
     }
   ];
 
   const stats = [
-    { number: "500+", label: "Psicólogos Cadastrados" },
-    { number: "10.000+", label: "Pacientes Atendidos" },
+    { number: "500+", label: "Psicólogos Conectados" },
+    { number: "320.000+", label: "Pessoas Alcançadas" },
     { number: "98%", label: "Taxa de Satisfação" },
-    { number: "2 Anos", label: "Garantia Especial" }
+    { number: "1 Anos", label: "Garantia Especial" }
   ];
 
   return (
@@ -209,7 +216,7 @@ const VSLanding = () => {
             
             {/* Subtítulo com Benefício Claro */}
             <p className="hero-subtitle">
-              <strong>2 anos de divulgação nacional GRATUITA</strong> + anúncios pagos + marketing profissional. 
+              <strong>1 ano de divulgação nacional GRATUITA</strong> + anúncios pagos + marketing profissional. 
               <br />
               <span className="text-primary">Conecte-se com pacientes de todo o Brasil sem pagar nada!</span>
             </p>
@@ -272,7 +279,7 @@ const VSLanding = () => {
               <div className="cta-benefits">
                 <div className="benefit-item">
                   <FaShieldAlt className="text-success" />
-                  <span>Garantia de 2 anos extras se não conseguir pacientes</span>
+                  <span>Garantia de 1 ano extra se não conseguir pacientes</span>
                 </div>
                 <div className="benefit-item">
                   <FaUsers className="text-primary" />
@@ -441,7 +448,7 @@ const VSLanding = () => {
                   </div>
                   <div className="stat-card">
                     <div className="stat-number">500+</div>
-                    <div className="stat-label">Psicólogos Ajudados</div>
+                    <div className="stat-label">Psicólogos Conectados</div>
                   </div>
                   <div className="stat-card">
                     <div className="stat-number">100%</div>
@@ -624,9 +631,8 @@ const VSLanding = () => {
                       <div className="accordion-body">
                         <div className="accordion-content">
                           <p>
-                            O plano Bronze oferece acesso básico à plataforma com até 50 consultas por mês. 
-                            O plano Prata inclui recursos avançados como marketing personalizado, 
-                            relatórios detalhados e suporte prioritário, além de consultas ilimitadas.
+                          O plano bronze é dedicado a quem tem menos de 365 dias de CRP habilitado e o plano prata é para profissionais com mais de 365 de CRP habilitado.
+                          Todos os planos incluem recursos avançados como marketing personalizado, relatórios no Dashboard e suporte técnico.
                           </p>
                         </div>
                       </div>
@@ -655,7 +661,7 @@ const VSLanding = () => {
                       <div className="accordion-body">
                         <div className="accordion-content">
                           <p>
-                            Sim! Oferecemos garantia de 30 dias. Se você não estiver satisfeito com 
+                            Sim! Oferecemos garantia de 7 dias. Se você não estiver satisfeito com 
                             a plataforma, pode cancelar sua assinatura a qualquer momento sem 
                             multas ou taxas ocultas.
                           </p>
@@ -686,9 +692,7 @@ const VSLanding = () => {
                       <div className="accordion-body">
                         <div className="accordion-content">
                           <p>
-                            Os pagamentos são processados automaticamente pela plataforma. 
-                            Você recebe o valor das consultas diretamente na sua conta bancária 
-                            em até 2 dias úteis, com relatórios detalhados de todas as transações.
+                          Você recebe o valor da sua sessão diretamente do seu paciente. Sem desconto, sem comissão, sem burocracia. Do seu jeito!
                           </p>
                         </div>
                       </div>
@@ -762,9 +766,9 @@ const VSLanding = () => {
                       <div className="pricing-info">
                         <div className="pricing-amount">
                           <h2>
-                            R$ 119,99 <span>/ano</span>
+                          Plano Anual Bronze • 12x
                           </h2>
-                          <h6>Plano Anual Bronze • 12x</h6>
+                          <h6>R$ 119,99 <span>/ano</span></h6>
                         </div>
                         <div className="pricing-list">
                           <ul>
@@ -810,19 +814,16 @@ const VSLanding = () => {
                       <div className="pricing-info">
                         <div className="pricing-amount">
                           <h2>
-                            R$ 199,99 <span>/ano</span>
+                          Plano Anual Prata • 12x
                           </h2>
-                          <h6>Plano Anual Prata • 12x</h6>
+                          <h6>R$ 199,99 <span>/ano</span></h6>
                         </div>
                         <div className="pricing-list">
                           <ul>
                             <li>Criação de Perfil</li>
                             <li>Agendamento de Consultas</li>
                             <li>Alertas de Notificação</li>
-                            <li>Acesso Estendido à Telemedicina</li>
-                            <li>Descontos Exclusivos</li>
-                            <li>Histórico de Consultas</li>
-                            <li>Suporte Prioritário ao Cliente</li>
+                            <li>Histórico de Consultas</li>                         
                           </ul>
                         </div>
                                                  <div className="pricing-btn">
@@ -880,8 +881,7 @@ const VSLanding = () => {
                   height="60"
                 />
                 <p className="footer-description">
-                  Conectando psicólogos a pacientes em todo o Brasil. 
-                  Transforme sua carreira com a plataforma mais completa do mercado.
+                Mind’s Club, conectando você no Brasil e no mundo!
                 </p>
                 <div className="social-links">
                   <a href="#" className="social-link">
@@ -931,7 +931,7 @@ const VSLanding = () => {
                   </p>
                   <p>
                     <FaHeart className="me-2" />
-                    (11) 99999-9999
+                    (31) 99594-1980
                   </p>
                 </div>
               </div>
