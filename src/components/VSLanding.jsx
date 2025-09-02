@@ -68,7 +68,7 @@ const VSLanding = () => {
       crp: "04/81514",
       content: "Acredito na Mind's Club por se tratar de uma plataforma que está nascendo junto com a minha carreira. Por ser uma plataforma com premissas que coadunam meus valores pessoais e profissionais.",
       rating: 5,
-      image: "juliana-assis.jpg"
+      image: "Juliana.jpg"
     },
     {
       name: "Taynara Lys",
@@ -113,7 +113,7 @@ const VSLanding = () => {
     },
     { 
       icon: <FaBullseye />, 
-      title: "Marketing cuidamos", 
+      title: "Cuidamos do seu marketing", 
       desc: "Nossa equipe investe em divulgação nacional para você" 
     },
     { 
@@ -127,7 +127,7 @@ const VSLanding = () => {
     { number: "500+", label: "Psicólogos Conectados" },
     { number: "320.000+", label: "Pessoas Alcançadas" },
     { number: "98%", label: "Taxa de Satisfação" },
-    { number: "1 Anos", label: "Garantia Especial" }
+    { number: "1 Ano", label: "Garantia Especial" }
   ];
 
   return (
@@ -226,27 +226,32 @@ const VSLanding = () => {
           <div className="row justify-content-center mb-5" data-aos="fade-up">
             <div className="col-lg-8">
               <div className="video-container">
-                <div 
-                  className="video-placeholder"
-                  onClick={() => setIsVideoPlaying(true)}
-                >
-                  {!isVideoPlaying ? (
-                    <>
-                      <div className="play-button">
-                        <FaPlay />
-                      </div>
-                      <div className="video-overlay">
-                        <h4>Assista o Vídeo Explicativo</h4>
-                        <p>Veja como a Mind's Club transformou a carreira de centenas de psicólogos</p>
-                      </div>
-                    </>
-                  ) : (
-                    <div className="video-playing">
-                      <FaPlay className="me-2" />
-                      Vídeo em reprodução...
+                {!isVideoPlaying ? (
+                  <div 
+                    className="video-placeholder"
+                    onClick={() => setIsVideoPlaying(true)}
+                  >
+                    <div className="play-button">
+                      <FaPlay />
                     </div>
-                  )}
-                </div>
+                    <div className="video-overlay">
+                      <h4>Assista o Vídeo Explicativo</h4>
+                      <p>Veja como a Mind's Club transformou a carreira de centenas de psicólogos</p>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="video-iframe-container">
+                    <iframe
+                      width="100%"
+                      height="400"
+                      src="https://www.youtube.com/embed/Cj7MXVk5FT4?autoplay=1&rel=0"
+                      title="Mind's Club - VSL Original"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -314,7 +319,7 @@ const VSLanding = () => {
               </div>
               <div className="badge">
                 <FaCheck />
-                <span>Garantia de 2 Anos</span>
+                <span>Garantia de 1 ano</span>
               </div>
               <div className="badge">
                 <FaUsers />
@@ -334,10 +339,10 @@ const VSLanding = () => {
                   <FaStar />
                   <FaStar />
                 </div>
-                <p>"Consegui 15 novos pacientes em apenas 2 meses!"</p>
+                <p>"Fiquei muito feliz em poder atender oficialmente pela Mind's Club. A experiência foi muito significativa porque senti na prática o propósito do projeto: levar apoio emocional além das fronteiras geográficas."</p>
                 <div className="author">
-                  <img src="assets/images/juliana-assis.jpg" alt="Juliana" />
-                  <span>Juliana Assis - CRP 04/81514</span>
+                  <img src="assets/images/taynara-lys.jpg" alt="Taynara" />
+                  <span>Taynara Lys - CRP 04/68936</span>
                 </div>
               </div>
             </div>
@@ -412,9 +417,12 @@ const VSLanding = () => {
                     <strong>Acredito que quem cuida da saúde mental também precisa ser cuidado. 
                     E é por isso que a Mind's Club nasceu.</strong>
                   </p>
-                  <button className="btn btn-primary btn-lg">
+                  <button 
+                    className="btn btn-primary btn-lg"
+                    onClick={() => document.getElementById('pricing-section').scrollIntoView({ behavior: 'smooth' })}
+                  >
                     <FaArrowRight className="me-2" />
-                    Conheça Nossa História
+                    Junte-se a Nós
                   </button>
                 </div>
               </div>
@@ -772,10 +780,12 @@ const VSLanding = () => {
                         </div>
                         <div className="pricing-list">
                           <ul>
-                            <li>Criação de Perfil</li>
-                            <li>Agendamento de Consultas</li>
-                            <li>Alertas de Notificação</li>
-                            <li>Acesso Limitado à Telemedicina</li>
+                            <li>Sem taxa de adesão</li>
+                            <li>Sem taxa sobre a sessão</li>
+                            <li>Divulgação em todo o brasil</li>
+                            <li>Parcelamento sem juros</li>
+                            <li>Até 365 dias de registro no CRP</li>
+                            <li>CRP Ativo</li>
                           </ul>
                         </div>
                                                  <div className="pricing-btn">
@@ -820,10 +830,12 @@ const VSLanding = () => {
                         </div>
                         <div className="pricing-list">
                           <ul>
-                            <li>Criação de Perfil</li>
-                            <li>Agendamento de Consultas</li>
-                            <li>Alertas de Notificação</li>
-                            <li>Histórico de Consultas</li>                         
+                            <li>Sem taxa de adesão</li>
+                            <li>Sem taxa sobre a sessão</li>
+                            <li>Divulgação em todo o brasil</li>
+                            <li>Parcelamento sem juros</li>
+                            <li>Até 365 dias de registro no CRP</li>
+                            <li>CRP Ativo</li>
                           </ul>
                         </div>
                                                  <div className="pricing-btn">
@@ -848,7 +860,7 @@ const VSLanding = () => {
                     Garantia Especial
                   </h3>
                   <p>
-                    Se você não conseguir nenhum paciente em um ano, você ganha mais 2 anos de visibilidade sem pagar mais nada.
+                    Se você não conseguir nenhum paciente em um ano, você ganha mais 1 ano de visibilidade sem pagar mais nada.
                   </p>
                 </div>
                 
@@ -948,7 +960,7 @@ const VSLanding = () => {
                 </p>
                 <div className="footer-badges">
                   <span className="badge">100% Seguro</span>
-                  <span className="badge">Garantia de 2 Anos</span>
+                  <span className="badge">Garantia de 1 ano</span>
                   <span className="badge">Suporte 24/7</span>
                 </div>
               </div>
