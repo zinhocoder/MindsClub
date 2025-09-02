@@ -4,7 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const VSLanding = () => {
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(true);
   const [timeLeft, setTimeLeft] = useState({
     hours: 23,
     minutes: 45,
@@ -226,32 +226,17 @@ const VSLanding = () => {
           <div className="row justify-content-center mb-5" data-aos="fade-up">
             <div className="col-lg-8">
               <div className="video-container">
-                {!isVideoPlaying ? (
-                  <div 
-                    className="video-placeholder"
-                    onClick={() => setIsVideoPlaying(true)}
-                  >
-                    <div className="play-button">
-                      <FaPlay />
-                    </div>
-                    <div className="video-overlay">
-                      <h4>Assista o Vídeo Explicativo</h4>
-                      <p>Veja como a Mind's Club transformou a carreira de centenas de psicólogos</p>
-                    </div>
-                  </div>
-                ) : (
-                  <div className="video-iframe-container">
-                    <iframe
-                      width="100%"
-                      height="400"
-                      src="https://www.youtube.com/embed/Cj7MXVk5FT4?autoplay=1&rel=0"
-                      title="Mind's Club - VSL Original"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    ></iframe>
-                  </div>
-                )}
+                <div className="video-iframe-container">
+                  <iframe
+                    width="100%"
+                    height="400"
+                    src="https://www.youtube.com/embed/Cj7MXVk5FT4?autoplay=1&rel=0"
+                    title="Mind's Club - VSL Original"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
               </div>
             </div>
           </div>
@@ -512,7 +497,7 @@ const VSLanding = () => {
               <div className="row">
                 {testimonials.map((testimonial, index) => (
                   <div key={index} className="col-lg-6 mb-4">
-                    <div className="testimonial-card">
+                    <div className="testimonial-card h-100 d-flex flex-column">
                       <div className="quote-icon">
                         <FaQuoteLeft />
                       </div>
@@ -523,11 +508,11 @@ const VSLanding = () => {
                         ))}
                       </div>
                       
-                      <p className="testimonial-content">
+                      <p className="testimonial-content flex-grow-1">
                         "{testimonial.content}"
                       </p>
                       
-                      <div className="testimonial-author">
+                      <div className="testimonial-author mt-auto">
                         <img 
                           src={`assets/images/${testimonial.image}`} 
                           alt={testimonial.name}
