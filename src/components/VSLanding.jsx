@@ -761,7 +761,7 @@ const VSLanding = () => {
                           <h2>
                           Plano Anual Bronze • 12x
                           </h2>
-                          <h6>R$ 119,99 <span>/ano</span></h6>
+                          <h6>R$ 119,99 <span>/mês</span></h6>
                         </div>
                         <div className="pricing-list">
                           <ul>
@@ -811,7 +811,7 @@ const VSLanding = () => {
                           <h2>
                           Plano Anual Prata • 12x
                           </h2>
-                          <h6>R$ 199,99 <span>/ano</span></h6>
+                          <h6>R$ 199,99 <span>/mês</span></h6>
                         </div>
                         <div className="pricing-list">
                           <ul>
@@ -819,7 +819,7 @@ const VSLanding = () => {
                             <li>Sem taxa sobre a sessão</li>
                             <li>Divulgação em todo o brasil</li>
                             <li>Parcelamento sem juros</li>
-                            <li>Até 365 dias de registro no CRP</li>
+                            <li>Mais de 365 dias de registro no CRP</li>
                             <li>CRP Ativo</li>
                           </ul>
                         </div>
